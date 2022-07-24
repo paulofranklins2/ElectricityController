@@ -1,11 +1,12 @@
-package com.eletricitycontroller.service.rent;
+package com.eletricitycontroller.service.implementation.rent;
 
-import com.eletricitycontroller.model.UserExpenses;
+import com.eletricitycontroller.model.UserExpense;
+import com.eletricitycontroller.service.RentCalcService;
 
 import java.math.BigDecimal;
 
-public class RentCalc {
-    public void rentCalc(UserExpenses userExpenses) {
+public class RentCalcImplementation implements RentCalcService {
+    public void rentCalc(UserExpense userExpenses) {
         double used = userExpenses.getKwUsed();
         int rounded = (int) Math.round(used);
         int counter = 0;
